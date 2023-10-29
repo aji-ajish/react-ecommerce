@@ -1,0 +1,59 @@
+{
+
+      "categories": [
+        {
+          "id": 1,
+          "name": "Electronics"
+        },
+        {
+          "id": 2,
+          "name": "Clothing"
+        },
+        {
+          "id": 3,
+          "name": "Home and Living"
+        }
+      ],
+      "products": [
+        {
+          "id": 1,
+          "name": "Product 1",
+          "description": "Description for Product 1",
+          "price": 29.99,
+          "currency": "USD",
+          "categories": [1],
+          "images": [
+            "https://www.examplestore.com/images/product1-1.jpg",
+            "https://www.examplestore.com/images/product1-2.jpg"
+          ],
+          "stock": 100
+        },
+        {
+          "id": 2,
+          "name": "Product 2",
+          "description": "Description for Product 2",
+          "price": 39.99,
+          "currency": "USD",
+          "categories": [2],
+          "images": [
+            "https://www.examplestore.com/images/product2-1.jpg",
+            "https://www.examplestore.com/images/product2-2.jpg"
+          ],
+          "stock": 50
+        },
+        {
+          "id": 3,
+          "name": "Product 3",
+          "description": "Description for Product 3",
+          "price": 19.99,
+          "currency": "USD",
+          "categories": [3],
+          "images": [
+            "https://www.examplestore.com/images/product3-1.jpg",
+            "https://www.examplestore.com/images/product3-2.jpg"
+          ],
+          "stock": 75
+        }
+      ]
+  }
+  
