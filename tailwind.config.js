@@ -1,16 +1,26 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const AnimateCSS = require('animated-tailwindcss')
+module.exports = AnimateCSS({
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      sx: "464px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      '2xl': '1536px',
+    },
     extend: {},
     fontFamily: {
       'nunito': ['Nunito'],
       'love': ['Love Ya Like A Sister'],
-      'agbalumo':['Agbalumo'],
-      'poppins':['Poppins']
+      'agbalumo': ['Agbalumo'],
+      'poppins': ['Poppins']
     },
   },
-  plugins: [],
-}
+  plugins: [
+  ],
+})

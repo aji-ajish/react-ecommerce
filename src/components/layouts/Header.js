@@ -1,34 +1,16 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import rightArrow from '../../assets/shapes/shape-1.webp'
 import leftArrow from '../../assets/shapes/shape-2.webp'
-import 'animate.css';
 import MainMenus from "./MainMenus";
 import SocialMediaLinks from "./SocialMediaLinks";
 
 
-export default function Navbar() {
-    const [isSideBarOpen, setIsSideBarOpen] = useState(true)
-    const [isMenuScrolled, setIsMenuScrolled] = useState(false);
+export default function Navbar({isMenuScrolled}) {
+    const [isSideBarOpen, setIsSideBarOpen] = useState(false)
     const [searchFormOpen, setSearchFormOpen] = useState(false)
 
+// Empty dependency array ensures the effect runs once after the initial render
 
-
-    const scrollCheck = () => {
-        if (window.pageYOffset > 100) {
-            setIsMenuScrolled(true);
-        } else {
-            setIsMenuScrolled(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', scrollCheck);
-
-        // Clean up the event listener on component unmount
-        return () => {
-            window.removeEventListener('scroll', scrollCheck);
-        };
-    }, []); // Empty dependency array ensures the effect runs once after the initial render
 
     const closeSideBar = () => {
         setIsSideBarOpen(false)
@@ -44,8 +26,8 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className={`${isSideBarOpen ? 'flex' : 'hidden'} absolute w-full top-0 left-0 h-screen z-10 lg:hidden bg-gray-800 bg-opacity-70 animate__animated  animate__fadeIn`} >
-                <div className="bg-white w-full md:max-w-sm shadow-2xl animate__animated  animate__fadeInLeft">
+            <nav className={`${isSideBarOpen ? 'flex' : 'hidden'} animate-fadeIn absolute w-full top-0 left-0 h-screen z-20 lg:hidden bg-gray-800 bg-opacity-70`} >
+                <div className="bg-white w-full md:max-w-sm shadow-2xl animate-fadeInLeft">
                     <div className="flex justify-end p-5 text-slate-700">
                         <svg onClick={closeSideBar} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -75,7 +57,7 @@ export default function Navbar() {
                 <div onClick={closeSideBar} className=" hidden sm:block sm:w-full">
                 </div>
             </nav>
-            <header className="absolute w-full">
+            <header className="absolute w-full z-10">
                 <div className="bg-slate-800 hidden lg:block">
                     <div className="container text-white py-2">
                         <ul className="flex justify-between ">
@@ -108,7 +90,7 @@ export default function Navbar() {
                         </ul>
                     </div>
                 </div>
-                <div className={`${isMenuScrolled ? 'fixed top-0 w-full bg-white shadow-xl animate__animated animate__slideInDown' : 'py-5'} px-5`}>
+                <div className={`${isMenuScrolled ? 'fixed top-0 w-full bg-white shadow-xl animate-slideInDown' : 'py-5'} px-5`}>
                     <div className={`${isMenuScrolled ? '' : 'border border-emerald-500 border-opacity-30'} py-3 md:py-3 flex items-center justify-between container rounded-xl`}>
                         <a href="#" className="order-2 lg:order-1">
                             <div>

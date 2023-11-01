@@ -1,59 +1,87 @@
 {
-
-      "categories": [
-        {
-          "id": 1,
-          "name": "Electronics"
-        },
-        {
-          "id": 2,
-          "name": "Clothing"
-        },
-        {
-          "id": 3,
-          "name": "Home and Living"
-        }
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Clothing"
+    },
+    {
+      "id": 3,
+      "name": "Home and Living"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "description": "Description for Product 1",
+      "price": 29.99,
+      "currency": "USD",
+      "categories": [1],
+      "images": [
+        "https://www.examplestore.com/images/product1-1.jpg",
+        "https://www.examplestore.com/images/product1-2.jpg"
       ],
-      "products": [
-        {
-          "id": 1,
-          "name": "Product 1",
-          "description": "Description for Product 1",
-          "price": 29.99,
-          "currency": "USD",
-          "categories": [1],
-          "images": [
-            "https://www.examplestore.com/images/product1-1.jpg",
-            "https://www.examplestore.com/images/product1-2.jpg"
-          ],
-          "stock": 100
-        },
-        {
-          "id": 2,
-          "name": "Product 2",
-          "description": "Description for Product 2",
-          "price": 39.99,
-          "currency": "USD",
-          "categories": [2],
-          "images": [
-            "https://www.examplestore.com/images/product2-1.jpg",
-            "https://www.examplestore.com/images/product2-2.jpg"
-          ],
-          "stock": 50
-        },
-        {
-          "id": 3,
-          "name": "Product 3",
-          "description": "Description for Product 3",
-          "price": 19.99,
-          "currency": "USD",
-          "categories": [3],
-          "images": [
-            "https://www.examplestore.com/images/product3-1.jpg",
-            "https://www.examplestore.com/images/product3-2.jpg"
-          ],
-          "stock": 75
-        }
-      ]
-  }
-  
+      "stock": 100
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "description": "Description for Product 2",
+      "price": 39.99,
+      "currency": "USD",
+      "categories": [2],
+      "images": [
+        "https://www.examplestore.com/images/product2-1.jpg",
+        "https://www.examplestore.com/images/product2-2.jpg"
+      ],
+      "stock": 50
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "description": "Description for Product 3",
+      "price": 19.99,
+      "currency": "USD",
+      "categories": [3],
+      "images": [
+        "https://www.examplestore.com/images/product3-1.jpg",
+        "https://www.examplestore.com/images/product3-2.jpg"
+      ],
+      "stock": 75
+    }
+  ],
+  "banner": [
+    {
+      "id": 1,
+      "image":"/assets/slider/1.jpg",
+      "offer_detail": "Sale offer 20%",
+      "product_name": "Samsung Galaxy S9",
+      "price": 20999.0
+    },
+    {
+      "id": 2,
+      "image":"/assets/slider/2.jpg",
+      "offer_detail": "Sale offer 20%",
+      "product_name": "All in One PCs",
+      "price": 50999.0
+    },
+    {
+      "id": 3,
+      "image":"/assets/slider/3.jpg",
+      "offer_detail": "Sale offer 20%",
+      "product_name": "Camera Drones",
+      "price": 15999.0
+    },
+    {
+      "id": 4,
+      "image":"/assets/slider/4.jpg",
+      "offer_detail": "Sale offer 20%",
+      "product_name": "DSLR Camera",
+      "price": 20999.0
+    }
+  ]
+}

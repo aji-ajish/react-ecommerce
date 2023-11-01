@@ -1,11 +1,12 @@
 import React from 'react'
 
-export default function Home() {
+import Banner from './banner/Banner';
+
+export default function Home({isMenuScrolled}) {
     return (
-        <section className='bg-emerald-50'>
-            <div className='container h-[2000px] lg:pt-52 pt-48'>
-                Just like arbitrary values let you use custom values with your utility classes, arbitrary variants let you write custom selector modifiers directly in your HTML.
-                Just like arbitrary values let you use custom values with your utility classes, arbitrary variants let you write custom selector modifiers directly in your HTML.
+        <section className='h-screen flex '>
+            <div className={`${isMenuScrolled?'lg:pt-52 pt-48':'lg:pt-40 pt-24'} h-96 md:h-[500px] lg:h-[600px] container  `}>
+            <Banner className="z-0"/>
             </div>
         </section>
     )
