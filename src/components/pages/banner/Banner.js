@@ -5,10 +5,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './banner.css';
-import bImage1 from '../../../assets/slider/1.jpg'
-import bImage2 from '../../../assets/slider/2.jpg'
-import bImage3 from '../../../assets/slider/3.jpg'
-import bImage4 from '../../../assets/slider/4.jpg'
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -18,28 +14,28 @@ export default function Banner() {
     const bannerImage = [
         {
             id: 1,
-            image: "/assets/slider/1.jpg",
+            image: "1.jpg",
             offer_detail: "Sale offer 20%",
             product_name: "Samsung Galaxy S9",
             price: 20999.0
         },
         {
             id: 2,
-            image: "/assets/slider/2.jpg",
+            image: "2.jpg",
             offer_detail: "Sale offer 20%",
             product_name: "All in One PCs",
             price: 50999.0
         },
         {
             id: 3,
-            image: "/assets/slider/3.jpg",
+            image: "3.jpg",
             offer_detail: "Sale offer 20%",
             product_name: "Camera Drones",
             price: 15999.0
         },
         {
             id: 4,
-            image: "/assets/slider/4.jpg",
+            image: "4.jpg",
             offer_detail: "Sale offer 20%",
             product_name: "DSLR Camera",
             price: 20999.0
@@ -72,14 +68,14 @@ export default function Banner() {
                 <div className='absolute flex'>
                     <div className='absolute top-36 sx:-ml-20 sx:top-40 md:-ml-52 md:pl-2 sm:-ml-52 sm sm:pt-20 lg:-ml-52 -ml-12 space-y-2  text-start flex-col mt-10 flex justify-center items-center w-full'>
                         <div className='fixed top-6 sm:top-30 sm:space-y-1 md:top-28 md:space-y-2'>
-                            <p className='text-sm sm:text-lg md:text-xl'>Sale offer 20%</p>
-                            <h2 className='text-2xl sm:text-3xl md:text-5xl w-36'>Samsung Galaxy S9</h2>
-                            <p><span className='text-md md:text-2xl'>starting at</span> <span className='text-violet-600 text-lg sm:text-3xl md:text-4xl'>₹20999.00</span></p>
+                            <p className='text-sm sm:text-lg md:text-xl'>{banner.offer_detail}</p>
+                            <h2 className='text-2xl sm:text-3xl md:text-5xl w-36'>{banner.product_name}</h2>
+                            <p><span className='text-md md:text-2xl'>starting at</span> <span className='text-violet-600 text-lg sm:text-3xl md:text-4xl'>{banner.price}</span></p>
                             <button className='py-1 px-2 w-28 text-sm sm:text-lg sm:px-3 md:text-xl md:w-56 bg-cyan-400 rounded-3xl text-cyan-50 font-bold'>Shop Now</button>
                         </div>
                     </div>
                     <div className=''>
-                        <img src={bImage1} className='rounded-xl object-scale-down' />
+                        <img src={require(`../../../assets/slider/${banner.image}`)} className='rounded-xl object-scale-down' />
                     </div>
                 </div>
             </SwiperSlide>
