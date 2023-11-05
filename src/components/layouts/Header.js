@@ -3,30 +3,39 @@ import rightArrow from '../../assets/shapes/shape-1.webp'
 import leftArrow from '../../assets/shapes/shape-2.webp'
 import MainMenus from "./MainMenus";
 import SocialMediaLinks from "./SocialMediaLinks";
+import useTheme from "./useTheme"
 
 
-export default function Navbar({isMenuScrolled}) {
+export default function Navbar({ isMenuScrolled }) {
     const [isSideBarOpen, setIsSideBarOpen] = useState(false)
     const [searchFormOpen, setSearchFormOpen] = useState(false)
+     const [isDark, setIsDark] = useState(true);
+    const [nextTheme, setTheme] = useTheme();
 
-// Empty dependency array ensures the effect runs once after the initial render
+    // Empty dependency array ensures the effect runs once after the initial render
 
 
     const closeSideBar = () => {
         setIsSideBarOpen(false)
+        console.log(isSideBarOpen);
     }
 
     const openSideBar = () => {
         setIsSideBarOpen(true)
+        console.log(isSideBarOpen);
     }
 
     const searchButton = () => {
-        console.log('sdc');
+        // console.log('sdc');
     }
 
+    const darkMode = () => {
+        setTheme(nextTheme)
+        setIsDark(!isDark);
+    };
     return (
         <>
-            <nav className={`${isSideBarOpen ? 'flex' : 'hidden'} animate-fadeIn absolute w-full top-0 left-0 h-screen z-20 lg:hidden bg-gray-800 bg-opacity-70`} >
+            <nav className={`${isSideBarOpen ? 'flex' : 'hidden'}transition-all duration-700  dark:text-slate-50 animate-fadeIn absolute w-full top-0 left-0 h-[200%] z-20 lg:hidden bg-gray-800 bg-opacity-70`} >
                 <div className="bg-white w-full md:max-w-sm shadow-2xl animate-fadeInLeft">
                     <div className="flex justify-end p-5 text-slate-700">
                         <svg onClick={closeSideBar} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
@@ -57,7 +66,7 @@ export default function Navbar({isMenuScrolled}) {
                 <div onClick={closeSideBar} className=" hidden sm:block sm:w-full">
                 </div>
             </nav>
-            <header className="absolute w-full z-10">
+            <header className="absolute w-full z-10 dark:text-slate-50 transition-all duration-700">
                 <div className="bg-slate-800 hidden lg:block">
                     <div className="container text-white py-2">
                         <ul className="flex justify-between ">
@@ -90,7 +99,7 @@ export default function Navbar({isMenuScrolled}) {
                         </ul>
                     </div>
                 </div>
-                <div className={`${isMenuScrolled ? 'fixed top-0 w-full bg-white shadow-xl animate-slideInDown' : 'py-5'} px-5`}>
+                <div className={`${isMenuScrolled ? 'fixed top-0 w-full  shadow-xl animate-slideInDown' : 'py-5'} px-5`}>
                     <div className={`${isMenuScrolled ? '' : 'border border-emerald-500 border-opacity-30'} py-3 md:py-3 flex items-center justify-between container rounded-xl`}>
                         <a href="#" className="order-2 lg:order-1">
                             <div>
@@ -105,6 +114,16 @@ export default function Navbar({isMenuScrolled}) {
                         </div>
                         <MainMenus />
                         <ul className="flex lg:gap-6 gap-1 lg:order-3 order-3">
+                            <li onClick={darkMode} className="relative">
+                                {isDark ? (
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 absolute">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                                    </svg>) :
+                                    (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 absolute">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                                    </svg>)
+                                }
+                            </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />

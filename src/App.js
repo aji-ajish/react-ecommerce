@@ -23,10 +23,10 @@ useEffect(() => {
 }, []); 
 console.log(isMenuScrolled);
   return (
-    <>
+    <div className="bg-slate-50 dark:bg-slate-900 transition-all duration-700">
       <Header  isMenuScrolled={isMenuScrolled}/>
       <Home isMenuScrolled={isMenuScrolled}/>
-    </>
+    </div>
   );
 }
 

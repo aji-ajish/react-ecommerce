@@ -4,6 +4,7 @@ module.exports = AnimateCSS({
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       sx: "464px",

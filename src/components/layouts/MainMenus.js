@@ -4,7 +4,7 @@ import SearchForm from './SearchForm'
 export default function MainMenus({ isSideBarOpen,searchButton }) {
 
     return (
-        <ul className={`${isSideBarOpen ? '' : 'lg:flex hidden'} text-lg font-agbalumo text-slate-800 gap-1 order-3`}>
+        <ul className={`${isSideBarOpen ? 'block' : 'lg:flex hidden'} dark:text-slate-50 transition-all duration-700 text-lg font-agbalumo text-slate-800 gap-1 order-3`}>
             <li className="p-3 px-6 border-t lg:border-0">Home</li>
             <li className="p-3 px-6 border-t lg:border-0">Home</li>
             <li className="p-3 px-6 border-t lg:border-0">Home</li>
