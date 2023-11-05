@@ -27,7 +27,7 @@ export default function Categories() {
     return (
         
         <>{categories.map((category => (
-            <div key={category.id} className="w-4/5 sm:w-1/2 md:w-1/3 xl:w-1/4 p-4 h-96 ">
+            <div key={category.id} className="w-4/5 sm:w-1/2 md:w-1/3 xl:w-1/4 p-4 md:h-96 ">
                 <a href="" className="block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden h-full border border-green-300">
                     <div className="relative pb-48 overflow-hidden pt-16 mt-5">
                         <img className="absolute inset-0 h-full w-full object-contain" src={require(`../../assets/categorie/${category.image}`)} alt={category.name} />
