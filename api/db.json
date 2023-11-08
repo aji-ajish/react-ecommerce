@@ -4,75 +4,75 @@
     {
       "id": 1,
       "name": "Cosmetic",
-      "image": "Cosmetic.jpg"
+      "image": "categorie/Cosmetic.jpg"
     },
     {
       "id": 2,
       "name": "Jewellery",
-      "image": "Jewellery.jpg"
+      "image": "categorie/Jewellery.jpg"
     },
     {
       "id": 3,
       "name": "Men",
-      "image": "Men.jpg"
+      "image": "categorie/Men.jpg"
     },
     {
       "id": 4,
       "name": "Women",
-      "image": "Women.jpg"
+      "image": "categorie/Women.jpg"
     },
     {
       "id": 5,
       "name": "Autoparts",
-      "image": "Autoparts.jpg"
+      "image": "categorie/Autoparts.jpg"
     },
     {
       "id": 6,
       "name": "Electronics",
-      "image": "Electronics.jpg"
+      "image": "categorie/Electronics.jpg"
     },
     {
       "id": 7,
       "name": "Bag",
-      "image": "Bag.jpg"
+      "image": "categorie/Bag.jpg"
     },
     {
       "id": 8,
       "name": "home appliances",
-      "image": "home.jpg"
+      "image": "categorie/home.jpg"
     },
     
     {
       "id": 9,
       "name": "Shoes & Sandals",
-      "image": "Shoes.jpg"
+      "image": "categorie/Shoes.jpg"
     }
   ],
   "banner": [
     {
       "id": 1,
-      "image": "1.jpg",
+      "image": "slider/1.jpg",
       "offer_detail": "Sale offer 20%",
       "product_name": "Samsung Galaxy S9",
       "price": 20999.0
     },
     {
       "id": 2,
-      "image": "2.jpg",
+      "image": "slider/2.jpg",
       "offer_detail": "Sale offer 20%",
       "product_name": "All in One PCs",
       "price": 50999.0
     },
     {
       "id": 3,
-      "image": "3.jpg",
+      "image": "slider/3.jpg",
       "offer_detail": "Sale offer 20%",
       "product_name": "Camera Drones",
       "price": 15999.0
     },
     {
       "id": 4,
-      "image": "4.jpg",
+      "image": "slider/4.jpg",
       "offer_detail": "Sale offer 20%",
       "product_name": "DSLR Camera",
       "price": 20999.0
@@ -81,29 +81,161 @@
   "products": [
     {
       "id": 1,
-      "name": "Product",
-      "description": "Description for Product 3",
-      "categories": 3,
+      "random_item":true,
+      "name": "Red Jacket",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus sapien et diam sollicitudin vestibulum. Nunc semper, ipsum eget posuere eleifend, nibh mauris tempus lorem, id ullamcorper ex massa nec libero.",
+      "categories": 4,
       "price": 450.0,
       "offer_price": 500.0,
-      "stock": 75,
+      "stock": 1,
       "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["red", "green", "blue", "yellow"],
+      "color": ["red", "green", "cyan", "orange","gray"],
       "images": [
-        "1.jpg",
-        "2.jpg"
+        "product_detail/red_Jacket_f.jpg",
+        "product_detail/red_Jacket_b.jpg"
       ],
-      "details": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a augue ac lacus hendrerit dapibus. Nam id quam at neque viverra dictum vel hendrerit sem. Proin non convallis nulla. Quisque aliquam neque mollis erat posuere, at fermentum ex convallis. Vivamus congue nisi sit amet nunc suscipit rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec efficitur, metus ac ultricies sagittis, tellus ipsum lacinia ligula, at feugiat tortor libero non ligula. Duis aliquam tempor leo, ac elementum libero gravida nec. Nullam suscipit risus at tincidunt fringilla. In quis tellus sed neque convallis mollis. Nunc lacus est, gravida id ipsum vitae, convallis gravida diam. Donec quis aliquam turpis, vitae volutpat ex. Phasellus non vulputate arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam euismod risus felis, ac posuere lacus consequat vel. Proin fringilla elementum elit, eget ullamcorper est pulvinar in. Sed egestas sapien metus, nec iaculis lectus hendrerit nec. Ut nec odio quis tortor elementum dictum. Phasellus ac gravida ante. Nullam ultrices sit amet turpis eget pharetra. Ut consequat cursus justo id sodales. In gravida pellentesque mauris sit amet dapibus. Praesent nec diam ex. Quisque ex mi, tincidunt nec auctor. ",
       "reviews": [
         {
           "id": 1,
           "name": "Ajish",
-          "rating": 4.5,
+          "rating": 4,
+          "title": "Demo",
+          "review": "some text",
+          "date": " Dec 30, 2018"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "random_item":true,
+      "name": "Cyan Jacket",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus sapien et diam sollicitudin vestibulum. Nunc semper, ipsum eget posuere eleifend, nibh mauris tempus lorem, id ullamcorper ex massa nec libero.",
+      "categories": 4,
+      "price": 450.0,
+      "offer_price": 500.0,
+      "stock": 1,
+      "size": ["XS", "S", "M", "L", "XL"],
+      "color": ["red", "green", "cyan", "orange","gray"],
+      "images": [
+        "product_detail/cyan_Jacket_b.jpg"
+      ],
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a augue ac lacus hendrerit dapibus. Nam id quam at neque viverra dictum vel hendrerit sem. Proin non convallis nulla. Quisque aliquam neque mollis erat posuere, at fermentum ex convallis. Vivamus congue nisi sit amet nunc suscipit rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec efficitur, metus ac ultricies sagittis, tellus ipsum lacinia ligula, at feugiat tortor libero non ligula. Duis aliquam tempor leo, ac elementum libero gravida nec. Nullam suscipit risus at tincidunt fringilla. In quis tellus sed neque convallis mollis. Nunc lacus est, gravida id ipsum vitae, convallis gravida diam. Donec quis aliquam turpis, vitae volutpat ex. Phasellus non vulputate arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam euismod risus felis, ac posuere lacus consequat vel. Proin fringilla elementum elit, eget ullamcorper est pulvinar in. Sed egestas sapien metus, nec iaculis lectus hendrerit nec. Ut nec odio quis tortor elementum dictum. Phasellus ac gravida ante. Nullam ultrices sit amet turpis eget pharetra. Ut consequat cursus justo id sodales. In gravida pellentesque mauris sit amet dapibus. Praesent nec diam ex. Quisque ex mi, tincidunt nec auctor. ",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Ajish",
+          "rating": 3.5,
+          "title": "Demo",
+          "review": "some text",
+          "date": " Dec 30, 2018"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "random_item":true,
+      "name": "Violet Jacket",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus sapien et diam sollicitudin vestibulum. Nunc semper, ipsum eget posuere eleifend, nibh mauris tempus lorem, id ullamcorper ex massa nec libero.",
+      "categories": 4,
+      "price": 450.0,
+      "offer_price": 500.0,
+      "stock": 1,
+      "size": ["XS", "S", "M", "L", "XL"],
+      "color": ["red", "green", "cyan", "orange","gray"],
+      "images": [
+        "product_detail/violet_Jacket_b.jpg"
+      ],
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a augue ac lacus hendrerit dapibus. Nam id quam at neque viverra dictum vel hendrerit sem. Proin non convallis nulla. Quisque aliquam neque mollis erat posuere, at fermentum ex convallis. Vivamus congue nisi sit amet nunc suscipit rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec efficitur, metus ac ultricies sagittis, tellus ipsum lacinia ligula, at feugiat tortor libero non ligula. Duis aliquam tempor leo, ac elementum libero gravida nec. Nullam suscipit risus at tincidunt fringilla. In quis tellus sed neque convallis mollis. Nunc lacus est, gravida id ipsum vitae, convallis gravida diam. Donec quis aliquam turpis, vitae volutpat ex. Phasellus non vulputate arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam euismod risus felis, ac posuere lacus consequat vel. Proin fringilla elementum elit, eget ullamcorper est pulvinar in. Sed egestas sapien metus, nec iaculis lectus hendrerit nec. Ut nec odio quis tortor elementum dictum. Phasellus ac gravida ante. Nullam ultrices sit amet turpis eget pharetra. Ut consequat cursus justo id sodales. In gravida pellentesque mauris sit amet dapibus. Praesent nec diam ex. Quisque ex mi, tincidunt nec auctor. ",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Ajish",
+          "rating": 3.5,
+          "title": "Demo",
+          "review": "some text",
+          "date": " Dec 30, 2018"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "random_item":true,
+      "name": "Orange Jacket",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus sapien et diam sollicitudin vestibulum. Nunc semper, ipsum eget posuere eleifend, nibh mauris tempus lorem, id ullamcorper ex massa nec libero.",
+      "categories": 4,
+      "price": 450.0,
+      "offer_price": 500.0,
+      "stock": 1,
+      "size": ["XS", "S", "M", "L", "XL"],
+      "color": ["red", "green", "cyan", "orange","gray"],
+      "images": [
+        "product_detail/orange_Jacket_b.jpg"
+      ],
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a augue ac lacus hendrerit dapibus. Nam id quam at neque viverra dictum vel hendrerit sem. Proin non convallis nulla. Quisque aliquam neque mollis erat posuere, at fermentum ex convallis. Vivamus congue nisi sit amet nunc suscipit rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec efficitur, metus ac ultricies sagittis, tellus ipsum lacinia ligula, at feugiat tortor libero non ligula. Duis aliquam tempor leo, ac elementum libero gravida nec. Nullam suscipit risus at tincidunt fringilla. In quis tellus sed neque convallis mollis. Nunc lacus est, gravida id ipsum vitae, convallis gravida diam. Donec quis aliquam turpis, vitae volutpat ex. Phasellus non vulputate arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam euismod risus felis, ac posuere lacus consequat vel. Proin fringilla elementum elit, eget ullamcorper est pulvinar in. Sed egestas sapien metus, nec iaculis lectus hendrerit nec. Ut nec odio quis tortor elementum dictum. Phasellus ac gravida ante. Nullam ultrices sit amet turpis eget pharetra. Ut consequat cursus justo id sodales. In gravida pellentesque mauris sit amet dapibus. Praesent nec diam ex. Quisque ex mi, tincidunt nec auctor. ",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Ajish",
+          "rating": 3.5,
+          "title": "Demo",
+          "review": "some text",
+          "date": " Dec 30, 2018"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "random_item":true,
+      "name": "Gray Jacket",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus sapien et diam sollicitudin vestibulum. Nunc semper, ipsum eget posuere eleifend, nibh mauris tempus lorem, id ullamcorper ex massa nec libero.",
+      "categories": 4,
+      "price": 450.0,
+      "offer_price": 500.0,
+      "stock": 1,
+      "size": ["XS", "S", "M", "L", "XL"],
+      "color": ["red", "green", "cyan", "orange","gray"],
+      "images": [
+        "product_detail/green_Jacket_f.jpg"
+      ],
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a augue ac lacus hendrerit dapibus. Nam id quam at neque viverra dictum vel hendrerit sem. Proin non convallis nulla. Quisque aliquam neque mollis erat posuere, at fermentum ex convallis. Vivamus congue nisi sit amet nunc suscipit rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec efficitur, metus ac ultricies sagittis, tellus ipsum lacinia ligula, at feugiat tortor libero non ligula. Duis aliquam tempor leo, ac elementum libero gravida nec. Nullam suscipit risus at tincidunt fringilla. In quis tellus sed neque convallis mollis. Nunc lacus est, gravida id ipsum vitae, convallis gravida diam. Donec quis aliquam turpis, vitae volutpat ex. Phasellus non vulputate arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam euismod risus felis, ac posuere lacus consequat vel. Proin fringilla elementum elit, eget ullamcorper est pulvinar in. Sed egestas sapien metus, nec iaculis lectus hendrerit nec. Ut nec odio quis tortor elementum dictum. Phasellus ac gravida ante. Nullam ultrices sit amet turpis eget pharetra. Ut consequat cursus justo id sodales. In gravida pellentesque mauris sit amet dapibus. Praesent nec diam ex. Quisque ex mi, tincidunt nec auctor. ",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Ajish",
+          "rating": 3.5,
+          "title": "Demo",
+          "review": "some text",
+          "date": " Dec 30, 2018"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "random_item":true,
+      "name": "Gray Jacket",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus sapien et diam sollicitudin vestibulum. Nunc semper, ipsum eget posuere eleifend, nibh mauris tempus lorem, id ullamcorper ex massa nec libero.",
+      "categories": 4,
+      "price": 450.0,
+      "offer_price": 500.0,
+      "stock": 1,
+      "size": ["XS", "S", "M", "L", "XL"],
+      "color": ["red", "green", "cyan", "orange","gray"],
+      "images": [
+        "product_detail/gray_Jacket_b.jpg"
+      ],
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a augue ac lacus hendrerit dapibus. Nam id quam at neque viverra dictum vel hendrerit sem. Proin non convallis nulla. Quisque aliquam neque mollis erat posuere, at fermentum ex convallis. Vivamus congue nisi sit amet nunc suscipit rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec efficitur, metus ac ultricies sagittis, tellus ipsum lacinia ligula, at feugiat tortor libero non ligula. Duis aliquam tempor leo, ac elementum libero gravida nec. Nullam suscipit risus at tincidunt fringilla. In quis tellus sed neque convallis mollis. Nunc lacus est, gravida id ipsum vitae, convallis gravida diam. Donec quis aliquam turpis, vitae volutpat ex. Phasellus non vulputate arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam euismod risus felis, ac posuere lacus consequat vel. Proin fringilla elementum elit, eget ullamcorper est pulvinar in. Sed egestas sapien metus, nec iaculis lectus hendrerit nec. Ut nec odio quis tortor elementum dictum. Phasellus ac gravida ante. Nullam ultrices sit amet turpis eget pharetra. Ut consequat cursus justo id sodales. In gravida pellentesque mauris sit amet dapibus. Praesent nec diam ex. Quisque ex mi, tincidunt nec auctor. ",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Ajish",
+          "rating": 3.5,
           "title": "Demo",
           "review": "some text",
           "date": " Dec 30, 2018"
         }
       ]
     }
+
   ]
 }

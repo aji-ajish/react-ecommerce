@@ -4,6 +4,7 @@ import leftArrow from '../../assets/shapes/shape-2.webp'
 import MainMenus from "./MainMenus";
 import SocialMediaLinks from "./SocialMediaLinks";
 import useTheme from "./useTheme"
+import { Link } from "react-router-dom";
 
 
 export default function Navbar({ isMenuScrolled }) {
@@ -36,9 +37,9 @@ export default function Navbar({ isMenuScrolled }) {
     return (
         <>
             <nav className={`transform ${isSideBarOpen ? 'translate-x-0' : '-translate-x-full'} z-40 absolute transition-transform duration-700 dark:text-slate-50 w-full top-0 left-0 h-[200%]  lg:hidden bg-gray-800 bg-opacity-70`} >
-                <div className="bg-white w-full md:max-w-sm shadow-2xl">
+                <div className="bg-slate-50 dark:bg-slate-900 w-full md:max-w-sm shadow-2xl">
                     <div className="flex justify-end p-5 text-slate-700 cursor-pointer">
-                        <svg onClick={closeSideBar} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                        <svg onClick={closeSideBar} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 dark:text-slate-50">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </div>
@@ -47,13 +48,13 @@ export default function Navbar({ isMenuScrolled }) {
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-emerald-500">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                             </svg>
-                            <a href='tel:+91 99999 99999' className="hover:text-emerald-500 transition-all duration-500">+91 99999 99999</a>
+                            <Link href='tel:+91 99999 99999' className="hover:text-emerald-500 transition-all duration-500 ">+91 99999 99999</Link>
                         </div>
                         <div className="flex gap-3 justify-center  mt-3">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-emerald-500">
                                 <path strokeLinecap="round" d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25" />
                             </svg>
-                            <a target='_blank' href='mailto:test@gmail.com' className="hover:text-emerald-500 transition-all duration-500">test@gmail.com</a>
+                            <Link target='_blank' href='mailto:test@gmail.com' className="hover:text-emerald-500 transition-all duration-500">test@gmail.com</Link>
                         </div>
                         <div className="mt-6">
                             <MainMenus isSideBarOpen={isSideBarOpen} searchButton={searchButton()} />
@@ -79,7 +80,7 @@ export default function Navbar({ isMenuScrolled }) {
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-emerald-500">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                                     </svg>
-                                    <a href='tel:+91 99999 99999' className="hover:text-emerald-500 transition-all duration-500">+91 99999 99999</a>
+                                    <Link href='tel:+91 99999 99999' className="hover:text-emerald-500 transition-all duration-500">+91 99999 99999</Link>
                                 </div>
                             </li>
                             <li>
@@ -87,7 +88,7 @@ export default function Navbar({ isMenuScrolled }) {
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-emerald-500">
                                         <path strokeLinecap="round" d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25" />
                                     </svg>
-                                    <a target='_blank' href='mailto:test@gmail.com' className="hover:text-emerald-500 transition-all duration-500">test@gmail.com</a>
+                                    <Link target='_blank' href='mailto:test@gmail.com' className="hover:text-emerald-500 transition-all duration-500">test@gmail.com</Link>
                                 </div>
                             </li>
                             <li>
@@ -99,28 +100,28 @@ export default function Navbar({ isMenuScrolled }) {
                         </ul>
                     </div>
                 </div>
-                <div className={`${isMenuScrolled ? 'fixed  top-0 w-full shadow-xl animate-slideInDown' : 'py-5'} z-50 bg-gray-50 px-5`}>
+                <div className={`${isMenuScrolled ? 'fixed  top-0 w-full shadow-lg shadow-slate-300 dark:shadow-md dark:shadow-slate-800 animate-slideInDown' : 'py-5'} z-50 bg-gray-50 dark:bg-slate-900 transition-all duration-700 px-5`}>
                     <div className={`${isMenuScrolled ? '' : 'border border-emerald-500 border-opacity-30'} py-3 md:py-3 flex items-center justify-between container rounded-xl`}>
-                        <a href="#" className="order-2 lg:order-1">
+                        <Link to="/" className="order-2 lg:order-1">
                             <div>
                                 <span className="sm:text-4xl text-3xl mr-1 font-love">Online</span>
                                 <span className="sm:text-2xl text-xl font-agbalumo">Shop</span>
                             </div>
-                        </a>
+                        </Link>
                         <div className="text-slate-700 order-1 lg:hidden cursor-pointer">
-                            <svg onClick={openSideBar} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ">
+                            <svg onClick={openSideBar} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 dark:text-slate-50">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
                         </div>
                         <MainMenus />
-                        <ul className="flex lg:gap-6 gap-1 lg:order-3 order-3">
+                        <ul className="flex lg:gap-6 sm:gap-3 gap-1 lg:order-3 order-3">
                             <li onClick={darkMode} className="cursor-pointer">
                                 {isDark ? (
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
                                     </svg>) :
                                     (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
                                     </svg>)
                                 }
                             </li>
