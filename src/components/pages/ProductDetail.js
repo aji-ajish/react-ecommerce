@@ -7,10 +7,10 @@ function ProductDetail({ isMenuScrolled }) {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [itemCount, setItemCount] = useState(1)
-
+    const PRODUCTS_API = 'http://localhost:3333/products/'
     useEffect(() => {
         // Fetch product details based on the ID from your API
-        fetch(`http://localhost:3333/products/${id}`)
+        fetch(PRODUCTS_API+id)
             .then((response) => response.json())
             .then((data) => setProduct(data))
             .catch((error) => console.error('Error fetching product:', error));

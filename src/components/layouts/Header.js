@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar({ isMenuScrolled }) {
     const [isSideBarOpen, setIsSideBarOpen] = useState(false)
-    const [searchFormOpen, setSearchFormOpen] = useState(false)
+    // const [searchFormOpen, setSearchFormOpen] = useState(false)
      const [isDark, setIsDark] = useState(true);
     const [nextTheme, setTheme] = useTheme();
 
@@ -18,12 +18,10 @@ export default function Navbar({ isMenuScrolled }) {
 
     const closeSideBar = () => {
         setIsSideBarOpen(false)
-        console.log(isSideBarOpen);
     }
 
     const openSideBar = () => {
         setIsSideBarOpen(true)
-        console.log(isSideBarOpen);
     }
 
     const searchButton = () => {
@@ -34,6 +32,7 @@ export default function Navbar({ isMenuScrolled }) {
         setTheme(nextTheme)
         setIsDark(!isDark);
     };
+
     return (
         <>
             <nav className={`transform ${isSideBarOpen ? 'translate-x-0' : '-translate-x-full'} z-40 absolute transition-transform duration-700 dark:text-slate-50 w-full top-0 left-0 h-[200%]  lg:hidden bg-gray-800 bg-opacity-70`} >

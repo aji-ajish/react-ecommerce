@@ -1,45 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
-export default function RandomItems() {
-    const [randomItems, setRandomItems] = useState([]);
+function ProductList({ isMenuScrolled }) {
+    const [products, setProducts] = useState([]);
+    const { id } = useParams();
 
-    const PRODUCTS_API = 'http://localhost:3333/products'; // Assuming this is the correct endpoint for fetching products
-
+    const CATEGORIES_API = ' http://localhost:3333/products?categories='
     useEffect(() => {
-        // Fetch product details based on the ID from your API
-        fetch(PRODUCTS_API)
-            .then((response) => response.json())
-            .then((data) => setRandomItems(data))
-            .catch((error) => console.error('Error fetching product:', error));
-    }, []);
-
-
-    if (!randomItems) {
-        return <div>Loading...</div>;
-    }
+        // Fetch data from the JSON server when the component mounts
+        fetch(CATEGORIES_API + id)
+            .then(response => response.json())
+            .then(data => setProducts(data))
+            .catch(error => console.error('Error fetching data:', error));
+    }, [id]); // The empty array ensures that this effect runs once after the initial render
 
     return (
-        <>
-            {randomItems.map(randomItem => (
-                randomItem.random_item ? (
-                    <div key={randomItem.id} className="w-4/6 sm:w-1/2 md:w-1/3 xl:w-1/4 p-2 group relative">
-                        <Link to={`/product/${randomItem.id}`} className="block bg-white shadow-md group-hover:shadow-2xl rounded-lg overflow-hidden h-full border border-green-300 group-hover:scale-105 transition-all duration-200">
+        <section className={`${isMenuScrolled ? 'pt-48 lg:pt-52' : 'pt-24 lg:pt-40'} p-0 pb-12 px-2 container mx-auto`}>
+            <div className="flex justify-center flex-wrap -mx-4 ">
+                {products.map(product => (
+                    <div key={product.id} className="w-4/6 sm:w-1/2 md:w-1/3 xl:w-1/4 p-2 group relative">
+                        <Link to={`/product/${product.id}`} className=" block bg-white shadow-md group-hover:shadow-2xl rounded-lg overflow-hidden h-full border border-green-300 group-hover:scale-105 transition-all duration-200">
                             <div className="relative pb-48 overflow-hidden pt-16 mt-5">
                                 {/* Properly concatenate the path to the first image file */}
-                                <img className="absolute inset-0 h-full w-full object-contain" src={require(`../../assets/${randomItem.images[0]}`)} alt={randomItem.name} />
+                                {/* <img className="absolute inset-0 h-full w-full object-contain" src={require(`../../assets/${product.images[0]}`)} alt={product.name} /> */}
                             </div>
-                            {/* <p className='text-red-600 text-lg'>stock left {randomItem.stock}</p> */}
+                            {/* <p className='text-red-600 text-lg'>stock left {product.stock}</p> */}
                             <div className="p-4 mb-5 text-center">
-                                <h2 className="mt-2 mb-1 font-bold text-lg text-slate-800">{randomItem.name}</h2>
+                                <h2 className="mt-2 mb-1 font-bold text-lg text-slate-800">{product.name}</h2>
                                 <div className='flex justify-center space-x-6 items-center'>
 
-                                    {randomItem.stock > 0 ? (
-                                        randomItem.stock <= 5 ? (
-                                            <p className="text-red-400 text-md">Stock left: {randomItem.stock}</p>
+                                    {product.stock > 0 ? (
+                                        product.stock <= 5 ? (
+                                            <p className="text-red-400 text-md">Stock left: {product.stock}</p>
                                         ) : ('')) : (<p className="text-red-400 text-md">Out of stock</p>
                                     )}
-                                    <h2 className="text-xl text-red-600">₹{randomItem.price}</h2>
+                                    <h2 className="text-xl text-red-600">₹{product.price}</h2>
                                 </div>
                             </div>
                         </Link>
@@ -54,10 +49,10 @@ export default function RandomItems() {
                             </div>
                         </div>
                     </div>
-                ) : ''
-
-            ))}
-
-        </>
+                ))}
+            </div>
+        </section>
     );
 }
+
+export default ProductList;
